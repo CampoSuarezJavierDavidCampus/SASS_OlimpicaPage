@@ -1,0 +1,103 @@
+@use '../../custom' as bootstrap;
+@use '../../util/placeholders' as placeholders;
+
+
+
+.olimpica__header-aside{    
+    .offcanvas{                    
+        
+        &-title{
+            @extend .col-8;
+            @extend .p-1;
+        }
+
+        &-header{
+            @extend .w-100;
+            @extend .pb-0;
+            @extend .pe-0;                        
+
+            .btn-close{
+                @extend .col-3;                
+                @extend .p-0;            
+                @extend .m-0;
+                @extend .h-100;
+                                
+                opacity: 1;
+            }
+        }
+
+        &-cart{
+            @extend .d-flex;
+            @extend .justify-content-center;
+            @extend .align-items-center;
+            .cart-logo{
+                @extend .d-flex;
+                @extend .flex-column;
+                @extend .align-items-center;                
+            }
+        }
+
+        &-body .accordion{    
+            &-sub, &-content{
+                @extend .h-100;
+
+                position: fixed;
+                width: bootstrap.$offcanvas-horizontal-width;
+                top: 0;
+            }
+
+            &-sub{
+                position: fixed;
+                left: bootstrap.$offcanvas-horizontal-width;                         
+                z-index: calc(bootstrap.$zindex-fixed*2);                    
+            }
+
+            &-content{                                           
+                left: calc(bootstrap.$offcanvas-horizontal-width * 2);
+                z-index: calc(bootstrap.$zindex-fixed*3);
+            }  
+                
+            &-return{
+                @extend .my-2;
+            
+                .icon__olimpica{
+                    @extend .py-2;
+                    @extend .px-4;
+                    @extend .me-2;
+                }
+            }
+        }
+
+        .list-group{
+            @extend .overflow-y-auto;
+            @extend .mt-4;
+            max-height: 80%;
+        }
+        
+    }
+}
+
+@include bootstrap.media-breakpoint-up('lg'){
+    .offcanvas .list-group{
+        max-height: 100% !important;    
+    }
+}
+
+@include bootstrap.media-breakpoint-up('xl'){
+    .accordion-return{
+        display: none;        
+    }
+}
+
+@include bootstrap.media-breakpoint-down('xl'){
+    .accordion{    
+
+        &-content{
+            left: 0 !important;
+        }
+        &-sub{
+            left: 0 !important;
+        }
+    }
+}
+

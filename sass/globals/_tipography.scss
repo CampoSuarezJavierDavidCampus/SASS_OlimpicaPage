@@ -1,0 +1,542 @@
+@use '../custom' as bootstrap;
+@use '../util/placeholders' as placeholder;
+
+/*=============================================
+=            CAROUSEL                         =
+=============================================*/
+
+.carousel{
+
+    &-inner{        
+        @extend .border;
+        @extend .border-5;
+        @extend .border-white;
+        @extend .rounded-5;
+    }   
+
+    &-indicators{
+        @extend .rounded-pill ;
+    }
+
+    & [data-bs-slide-to]{
+        @extend .rounded-circle;
+        @extend .border;
+        @extend .border-1;
+        @extend .border-dark;        
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next{        
+        border-radius: 50%;    
+    }
+}
+/*=====  End of CAROUSEL  ======*/
+
+
+
+
+
+/*=============================================
+=            HEADER                           =
+=============================================*/
+.olimpica__header{
+    .dropdown{    
+        &-header,&-item{
+            @extend .text-center;
+            @extend .text-uppercase;
+            
+            @extend .text-wrap;
+            @extend .fs-6;
+        }
+     
+        &-item{
+            @extend .fw-bold;                
+            @extend .fs-6;
+            @extend .text-info;
+        }
+    
+    }
+
+    &-aside .offcanvas{
+        @extend .border-0;    
+
+        &-title{
+            @extend .text-white;            
+            @extend .text-center;
+            @extend .text-capitalize;            
+            @extend .border-bottom;
+            @extend .border-4;
+            @extend .border-white;
+
+            border-radius: 1rem 0 0 0;
+        }
+
+        &-body .accordion{                        
+
+            &-content{
+                @extend .border-start;
+                @extend .border-4;    
+                
+                border-color: map-get(bootstrap.$grays, '400' ) !important;
+            }
+
+            &-return{
+                @extend .text-center;  
+
+                .icon__olimpica{@extend .rounded-pill;}
+            }
+
+                    
+        }     
+        .list-group-item{
+            @extend .text-capitalize;
+            @extend .fw-bold;
+        }
+
+        .cart-logo{
+            .icon__olimpica--cart{
+                font-size: 6rem;                              
+            }     
+            .olimpica__text-icon{
+                @extend .text-white;
+            }
+        }
+        
+        
+        .olimpica__text-icon{
+            @extend .fw-bold;
+            @extend .fs-4;
+            @extend .text-capitalize;
+            @extend .text-center;
+            @extend .text-dark;
+            @extend .border-bottom;
+            @extend .border-4;
+            @extend .border-warning;
+        }       
+    }
+    
+    .olimpica__navbar{
+        .navbar-toggler{
+            @extend .border-0;
+            &-text{
+                @extend .fw-bold;
+                @extend .text-white
+            }
+        }
+
+        .olimpica__nav{
+            &-item{
+                @extend .fw-light;    
+                @extend .lh-1;
+    
+                &--travel{border-right: solid 2px bootstrap.$white;}
+    
+                &-link{
+                    @extend .text-wrap; 
+                    @extend .text-white;    
+                    @extend .text-center;
+                    @extend .text-capitalize;
+    
+                    text-decoration: none;
+    
+                    .icon__olimpica{
+                        @extend .fs-5;
+                    }
+                }            
+            }  
+
+            .dropdown{
+                &-item{@extend .rounded-pill;}
+
+                &-toggle::after{
+                    border: none;
+                }
+            }
+        }      
+
+
+        &--actions .olimpica__nav{
+            font-size: .9rem;   
+
+            .navbar-toggler{
+                @extend .border-0 ;
+                &-text{                    
+                    @extend .text-white;
+                    @extend .fw-semibold;                  
+                }
+            }
+
+            
+        }
+
+        #search{
+            &__input{
+                @extend .border-0;
+            }
+
+            .form-control{
+                @extend .border-0;
+
+                &::placeholder{
+                    @extend .fw-semibold;
+
+                    color: bootstrap.$primary;
+                }
+            }
+        }
+        &--callcenter .olimpica__nav-link{                        
+            @extend .fw-semibold;                        
+            font-size: .8rem;
+        }
+        
+
+        
+        
+        
+    }
+}
+
+
+/*=====  End of HEADER  ======*/
+
+
+
+
+
+/*=============================================
+=            FOOTER                           =
+=============================================*/
+
+.olimpica__footer{
+    .footer-enlaces{
+        .olimpica__subscripcion{
+            @extend .border-0;
+            .form-control, .input-group-text{
+                @extend .border-0;
+                @extend .rounded-0; 
+                
+            }
+
+            .form-label{
+                @extend .fs-4;
+                @extend .text-white;
+            }
+
+            .input-group-text{
+                @extend .border-0;
+            }
+        }
+
+        .olimpica__logo{ 
+            @extend .text-white;
+
+            &-subtitle{
+                @extend .text-capitalize;
+            }
+
+
+            &-help{
+                @extend .text-center;
+                @extend .lh-lg;   
+                @extend .border-bottom;
+                @extend .border-4;                
+            }
+            
+            &-redes-sociales, &-apps{
+                @extend .fs-4;    
+            }
+
+            &-redes-sociales .icon__olimpica{
+                cursor: pointer;
+            }
+
+            &-store{
+                @extend .fs-6;
+                @extend .border;
+                @extend .border-2;
+                @extend .border-white;
+                @extend .rounded-pill;
+                @extend .text-center;
+                @extend .text-capitalize;
+                cursor: pointer;
+            }
+            
+        }
+
+        .olimpica__enlaces{            
+            border: .25rem solid #fff;            
+            border-radius: 1rem;
+            
+            .accordion{
+                &-button{
+                    @extend .fw-bold;
+                    @extend .fs-6;
+                    @extend .text-uppercase;
+                    @extend .text-white;
+                    @extend .border-bottom;
+                    @extend .border-2;
+                    @extend .border-white;
+                }
+                
+                .list-group{
+                    @extend .text-capitalize;
+                    @extend .fw-semibold;
+                    @extend .fs-6;
+                    
+                    &:last-child{
+                        @extend .rounded-bottom;
+                    }
+                }
+            }                           
+        }
+
+        .olimpica__copyright{    
+            @extend .text-center;
+
+            .copyright__title{
+                @extend .fw-bold;
+                @extend .fs-4;                  
+            }
+            
+            .copyright__correo{
+                @extend .fs-6;                
+                @extend .text-center;                
+                color: map-get(bootstrap.$grays, '700' );
+                text-decoration: none;
+                
+            }
+
+            .copyright__patrocinios.patrocinios-compra{
+                @extend .text-start;
+                
+            }
+        }
+    }
+}
+
+/*=====  End of FOOTER  ======*/
+
+/*=============================================
+=            CATALOGO OLIMPICA                =
+=============================================*/
+
+/** OLIMPICA CATALOGO HEADER*/
+.catalogo__header{        
+    .olimpica__badge-enlace{
+        @extend .text-white;    
+        text-decoration: none;
+
+        .olimpica__badge-text{
+            @extend .text-uppercase;    
+
+            font-size: .8rem;
+
+            &--small{
+                font-size: .5rem ;
+            }        
+        }
+        
+        .icon__olimpica{
+            @extend .fs-5;
+        }
+
+        
+
+        &--catalogo, &--tiendas{
+            @extend .border;
+            @extend .border-2;
+            @extend .border-info;
+            .icon__olimpica{
+                @extend .text-primary;                              
+            }
+            .olimpica__badge-text{
+                @extend .text-info;    
+            }
+
+        }
+
+        &--abejoral, &--metodo-envio{
+            @extend .text-wrap;     
+            @extend .border;
+            @extend .border-top-0;
+            @extend .border-3;
+            @extend .border-primary;
+            @extend .rounded-bottom;
+            
+            .olimpica__badge-text{
+                @extend .text-primary;                                              
+            }
+        }
+
+        &--abejoral{
+            .icon__olimpica{
+                @extend .text-primary;                              
+            }
+        }
+
+        &--metodo-envio{
+            .icon__olimpica{
+                color: map-get(bootstrap.$grays, '700' );
+            }
+        }
+
+
+        
+    }
+    
+    .carousel{
+        &-inner{        
+            @extend .border-dark;
+        }  
+        .carousel-control-prev,
+        .carousel-control-next{        
+            @extend .border;
+            @extend .border-dark;
+            @extend .border-2;
+        }
+    }
+
+    #olimpica__carousel-principal-ofertas{                     
+        .carousel-inner{                          
+            @extend .border-0;
+
+            border-bottom: 1rem solid bootstrap.$dark !important;
+            border-radius: 1rem !important;
+
+        }  
+        
+    }
+        
+    .card{
+
+        .olimpica__picture-actions .icon__olimpica{
+            @extend .text-info;
+            @extend .fs-3;
+            @extend .text-center;
+
+            &::after{
+                @extend .border;
+                @extend .border-2;
+                @extend .border-info;
+                @extend .rounded-3;
+            }    
+        }
+            
+        
+        
+        &-img-mesage{
+            @extend .text-center;
+            @extend .fw-bold;
+            @extend .lh-1;
+            
+            font-size: .8rem;
+        }
+
+
+
+        &-body{
+            @extend .fw-semibold;            
+
+            &__small , &__small-precio{                
+                @extend .lh-1;
+
+                font-size: .6rem;
+                color: map-get(bootstrap.$grays, '600' );
+            }
+
+            &__precio{
+                @extend .fs-5;
+                &--card{
+                    @extend .text-primary;
+                }
+            }
+        }
+        &-footer{
+            @extend .text-center;
+            @extend .text-uppercase;
+            @extend .text-info;
+        }
+    }
+}
+
+/** OLIMPICA CATALOGO TECNOLOGIA */
+.catalogo__tecnologia{ 
+    .olimpica__section-title{
+        @extend .border-white;
+        .catalogo__supermarket-tittle{
+            @extend .text-white;                        
+            @extend .rounded-bottom;
+            @extend .rounded-4;
+            
+        }
+    }
+    
+
+    .carousels{
+        .carousel--3{
+            .carousel-inner{
+                @extend .border-0;
+                @extend .rounded-2;
+            }
+            
+        }
+    }
+
+    .catalogo__collections{
+        #tecnologia__promociones4{
+            .carousel-inner{
+                @extend .border-2;
+                @extend .border-white;
+                @extend .rounded-2;
+            }
+        }
+
+        .catalogo__imagen{          
+            @extend .border;
+            @extend .border-2;
+            @extend .border-white; 
+        }
+    }
+}
+
+
+/** OLIMPICA CATALOGO FOOTER*/
+.catalogo__footer{
+    .olimpica__section-title-footer{
+        @extend .border-0;        
+        @extend .fs-3;        
+    }
+}
+
+/*=====  End of CATALOGO OLIMPICA  ======*/
+
+
+
+
+
+@include bootstrap.media-breakpoint-down('lg'){
+    .olimpica__enlaces{
+        border: none !important;
+    }
+}
+
+
+
+
+
+.olimpica__section-title{    
+    @extend .text-black;
+    @extend .border-black;
+
+    @extend .fs-1;   
+    @extend .text-capitalize;     
+    @extend .border-bottom;    
+    @extend .border-4;    
+
+    .catalogo__supermarket-tittle{        
+        @extend .p-1;
+        @extend .rounded-bottom;
+        @extend .rounded-4;
+        
+    }
+}

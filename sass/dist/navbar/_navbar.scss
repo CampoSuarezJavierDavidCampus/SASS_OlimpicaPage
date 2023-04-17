@@ -1,0 +1,199 @@
+@use '../../custom' as bootstrap;
+@use '../../util/placeholders' as placeholders;
+
+/*=============================================
+=            OLIMPICA HEADER                  =
+=============================================*/
+
+.olimpica__header{
+    @extend .position-sticky;    
+    @extend .w-100;
+
+    top: 0px;    
+    z-index: bootstrap.$zindex-sticky;
+
+    .olimpica__navbar{
+        @extend .container-lg;
+        @extend .navbar;    
+        @extend .navbar-collapse; 
+        @extend .flex-row;
+        @extend .justify-content-center;   
+    
+        .navbar-toggler-text{                     
+            @extend .p-0;  
+
+            display: none;                
+        } 
+
+        .olimpica__nav{
+            @extend .navbar-nav;
+            @extend .flex-row;
+            @extend .p-0;
+            @extend .justify-content-center;             
+            &--hidden{
+                @extend .d-none;
+                @extend .d-md-flex;                                        
+            }
+
+            &-item{
+                @extend .p-0;
+
+                &-link{
+                    @extend .h-100;             
+                    @extend .d-flex;
+                    @extend .flex-wrap;
+                    @extend .justify-content-center;
+                    @extend .align-items-end;                      
+
+                    &--hidden{
+                        @extend .d-none;
+                        @extend .d-md-flex;                                        
+                    }
+
+                    .icon__olimpica{
+                        @extend .px-1;                                                        
+                    }                    
+                }
+            }
+
+            .dropdown{
+                &-menu{
+                    @extend .container;                                                        
+                    width: 21.5rem; 
+                    max-width: 100%;                             
+                    top: 1rem !important;
+                    
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        right: 0.5rem;
+                        top: - 1rem;                                
+                        height: 0;
+                        width: 0;
+                        border-right: 1.1rem solid transparent;
+                        border-left: 1.1rem solid transparent;
+                        border-bottom: 1.5rem solid bootstrap.$dark;
+                    }
+                }
+
+                &-item{
+                    @extend .py-2;
+                    @extend .my-1;                    
+                }
+            }
+        }
+
+        &--callcenter{            
+            @extend .justify-content-between;
+
+            .olimpica__nav{                                
+                @extend .col;
+                @extend .col-md-5;                
+                &-item{                    
+                    @extend .px-3;                    
+                    &-link--hidden{
+                        @extend .d-none;
+                        @extend .d-md-flex;
+                        @extend .flex-row;
+                        @extend .align-items-end;
+                    }
+                }
+            }      
+        }
+        
+        &--actions{            
+            @extend .justify-content-md-evenly;
+            @extend .justify-content-lg-between;
+
+            .olimpica__nav{                               
+                @extend .px-2;
+                @extend .pb-2;
+                @extend .col-5;
+                @extend .col-lg-4;
+                @extend .order-lg-last;
+                             
+                &-item{
+                    @extend .px-1;                  
+                    @extend .px-md-2;                    
+
+                    &-link{padding-bottom: bootstrap.$spacer * .25;}                                        
+                }
+    
+            }
+
+            .navbar-toggler{
+                @extend .p-0;                
+                @extend .col-1;
+                @extend .col-md-2;
+                @extend .d-flex;
+                @extend .align-items-center;
+                @extend .justify-content-center;
+
+                &:focus{
+                    box-shadow: 0 0 0 0 
+                }
+
+                &-text{
+                    @extend .d-none;
+                    @extend .d-md-inline;                      
+                }
+            }
+
+            .navbar-brand{
+                @extend .col-5;
+                @extend .m-0;
+                @extend .px-1;
+                @extend .order-lg-first;
+                max-height:   2.53125rem; 
+                max-width:    13rem;
+            }
+
+            #search{
+                @extend .col-11;
+                @extend .col-lg;
+            }
+            
+        }
+    }
+}
+@media (min-width: 1539.99px) {
+    .dropdown-menu{
+        &::after{
+            left: 0;
+        }
+    }
+}
+
+@include bootstrap.media-breakpoint-down('md'){
+    .offcanvas{
+        width: 100% !important;
+    }
+    .accordion-body{    
+        width: 100% !important;
+    }
+}
+
+@include bootstrap.media-breakpoint-down('sm'){
+    .dropdown{
+        &-header{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        &-menu{
+            width: 73% !important;                
+            transform: translate3d(0px, 52, 0px) !important;        
+        }
+    }
+    
+}
+
+/*=====  End of OLIMPICA HEADER  ======*/
+
+
+
+
+
+
+
+
+

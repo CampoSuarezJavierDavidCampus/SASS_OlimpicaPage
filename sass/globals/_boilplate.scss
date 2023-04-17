@@ -1,0 +1,131 @@
+@use '../custom' as bootstrap;
+@use '../util/placeholders' as placeholders;
+
+/*=============================================
+=            GLOBALS                          =
+=============================================*/
+
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+body{
+    box-sizing: border-box;    
+}
+/* 
+main{
+    background: map-get(bootstrap.$grays, '200' );
+}
+ */
+/*=====  End of GLOBALS  ======*/
+
+
+
+
+
+/*=============================================
+=            PICTURE                             =
+=============================================*/
+.olimpica__picture{
+    @extend .px-0;
+    &-xl{
+        @extend .col-12;
+    }
+    
+    &-lg{
+        @extend .col;
+        @extend .col-lg-8;
+    }
+    
+    &-md{
+        @extend .col;
+        @extend .col-lg-4;
+    }
+    
+    &-sm{
+        @extend .col;
+        @extend .col-lg-2;
+    }
+}
+
+
+.olimpica__img{
+    @extend .img-fluid;        
+    height: 100%;
+    width: 100%;    
+    object-fit: fill;    
+}
+
+/*=====  End of PICTURE  ======*/
+
+
+
+
+
+/*=============================================
+=            CAROUSEL                         =
+=============================================*/
+
+.carousel{
+
+    
+
+    &-inner{
+        @extend .h-100;
+    }
+
+    &-item{
+        @extend .h-100;
+        
+    }       
+
+    &-indicators{        
+        @extend .px-4;
+        @extend .py-3;   
+        @extend .mx-auto;
+        @extend .mb-0;
+        @extend .shadow;
+
+        bottom: -1.5rem;
+        width: min-content;
+    }
+    
+
+    & [data-bs-slide-to]{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &--lg{
+        @extend .col;
+        @extend .col-lg-8;
+    }
+    &--xl{
+        @extend .col-12;        
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next{   
+        width: 2rem;
+        top:calc(50% - 1rem);
+        bottom:calc(50% - 1rem);
+    }
+}
+
+@include bootstrap.media-breakpoint-up('lg'){
+    .carousel{        
+        height: 24rem;
+    }
+}
+@include bootstrap.media-breakpoint-down('lg'){
+    .carousel{        
+        height: 12rem;
+    }
+}
+
+/*=====  End of CAROUSEL  ======*/
+
+
+
+
+

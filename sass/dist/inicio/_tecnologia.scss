@@ -1,0 +1,92 @@
+@use '../../custom' as bootstrap;
+
+
+/*=============================================
+=            CATALOGO TECNOLOGIA              =
+=============================================*/
+
+.catalogo__tecnologia{    
+
+    &--container{
+        @extend .row;
+        @extend .container-lg;
+        @extend .justify-content-between;
+        @extend .gy-4;
+        @extend .px-0;        
+        @extend .p-md-4;
+        @extend .mx-auto;   
+    }   
+    
+    .olimpica__section-title{        
+        .catalogo__supermarket-tittle{
+            @extend .p-1;
+        }
+    }
+    
+
+    .carousels{
+        @extend .col-lg-7;
+        @extend .row;  
+        @extend .px-0;  
+        @extend .gy-3;
+
+        .carousel{
+            @extend .px-0;
+        }
+
+        .carousel--3{
+            height: 5rem;
+        }
+    }
+
+    .catalogo__collections{
+        @extend .col-12;
+        @extend .col-lg-5;
+        @extend .row; 
+        @extend .gx-2;
+
+        max-height: 31rem !important;
+
+        &-section, #tecnologia__promociones4{
+            @extend .col-lg-6;
+            @extend .px-0;            
+            @extend .m-0;     
+                      
+        }
+        
+        &-section{
+            @extend .row;               
+                                 
+            .catalogo__imagen{
+                @extend .col-6;
+                @extend .col-lg-12;
+                height: 14.5rem;            
+            }
+        }
+        
+        #tecnologia__promociones4{   
+            height: 14.5rem;                     
+            @extend .py-1; 
+        }
+
+        .catalogo__imagen{
+            @extend .p-0;
+            @extend .my-1;                                    
+        }
+    }
+}
+
+@include bootstrap.media-breakpoint-up('lg'){
+    .catalogo__tecnologia .catalogo__collections{  
+        #tecnologia__promociones4{                     
+            height: 100%
+        }
+
+    }
+}
+
+
+
+
+/*=====  End of CATALOGO TECNOLOGIA  ======*/
+

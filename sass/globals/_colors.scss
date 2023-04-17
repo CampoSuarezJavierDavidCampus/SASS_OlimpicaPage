@@ -1,0 +1,210 @@
+@use '../custom' as bootstrap;
+/*=============================================
+=            CAROUSEL                         =
+=============================================*/
+
+.carousel{
+    .carousel-control-prev,
+    .carousel-control-next{
+        @extend .bg-white;
+    }
+
+    & [data-bs-slide-to]{
+        background-color: map-get(bootstrap.$grays, '200' );
+    }
+
+    & [data-bs-slide-to].active {
+        @extend .bg-primary;
+    }
+
+    &-indicators{
+        background-color: map-get(bootstrap.$grays, '100' )
+    }
+}
+/*=====  End of CAROUSEL  ======*/
+
+
+
+
+
+/*=============================================
+=            NAVBAR                           =
+=============================================*/
+
+.olimpica__header{
+    &-callcenter{
+        @extend .bg-secondary;
+    }    
+
+    &-actions{
+        @extend .bg-primary;
+
+        #search{
+            &__input{
+                @extend .bg-white;    
+                .icon__olimpica{color:bootstrap.$info;}
+            }
+        }
+
+        .dropdown{
+            &-menu{
+                @extend .bg-dark;
+            }
+            &-item{
+                background: map-get(bootstrap.$blues, 'blue-100' );
+            }
+        }
+    }
+
+    &-aside .offcanvas{
+        @extend .bg-dark;
+        
+        &-title{@extend .bg-primary;}
+
+        &-header .btn-close{@extend .bg-warning;}
+
+        &-body .accordion{
+            &-sub{background: map-get(bootstrap.$grays, '200');}
+                    
+            &-content{background: map-get(bootstrap.$grays, '300');}
+
+            &-header{@extend .bg-light;}
+                    
+            &-return{
+                &::after{background: none;}
+
+                .icon__olimpica{@extend .bg-dark;}
+            }                        
+        }                
+            
+        .list-group{
+            background: transparent !important;
+
+            &-item{
+                background: transparent !important;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+/*=====  End of NAVBAR  ======*/
+
+
+
+
+
+/*=============================================
+=            FOOTER            =
+=============================================*/
+
+.olimpica__footer{
+    @extend .bg-dark;       
+
+    .olimpica__subscripcion{        
+        @extend .bg-primary;
+
+        .input-group-text{
+            background: transparent;
+            .icon__olimpica{
+                @extend .bg-black;       
+                &::after{                    
+                    @extend .bg-white;
+                }
+            }    
+        }                        
+    }
+    .olimpica__enlaces{
+        .accordion{
+            &-button , &-item{
+                @extend .bg-dark;
+            }
+            .list-group .list-group-item{
+                @extend .bg-white;                
+            }
+        }
+    }
+
+    .olimpica__copyright{
+        @extend .bg-white;
+        .copyright__patrocinios{
+            background: map-get(bootstrap.$grays,'100' );
+                        
+        }
+    }
+    
+    
+}
+
+/*=====  End of FOOTER  ======*/
+
+/*=============================================
+=            OLIMPICA CATALOGO            =
+=============================================*/
+
+/** OLIMPICA CATALOGO HEADER*/
+.catalogo__header{
+    .olimpica__badge-collection{        
+
+        .olimpica__badge-enlace{
+            @extend .badge;
+            
+            &--abejoral,&--metodo-envio{
+                background: map-get(bootstrap.$grays, '200' );
+            } 
+                
+            
+            
+            &--supermercado{
+                @extend .bg-success;
+            }
+            &--drogeria{
+                @extend .bg-info;
+            }
+            &--electrodomesticos{
+                @extend .bg-warning;
+            }
+            &--catalogo{
+                @extend .bg-light;
+            }
+            &--tiendas{
+                @extend .bg-light;
+            }
+        }
+    }
+
+    .card{
+        .olimpica__picture-actions .icon__olimpica::after{
+            background: map-get(bootstrap.$grays, '300' );
+        }
+
+        .olimpica__picture-actions .icon__olimpica:hover::after{
+            background: white;
+        }
+
+        .olimpica__picture:hover::after {
+            background:map-get(bootstrap.$grays, '600' );;
+        }
+        
+    }
+}
+
+/** OLIMPICA CATALOGO TECNOLOGIA */
+.catalogo__tecnologia{  
+    @extend .bg-dark;
+    .olimpica__section-title{        
+        .catalogo__supermarket-tittle{            
+            @extend .bg-info;            
+        }
+    }
+}
+
+
+/*=====  End of OLIMPICA CATALOGO  ======*/
+
+
+
+
+
+

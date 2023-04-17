@@ -1,0 +1,33 @@
+@use '../../custom' as bootstrap;
+/*=============================================
+=            CATALOGO FOOTER                  =
+=============================================*/
+
+.catalogo__footer{    
+    @extend .h-auto;
+    @extend .mx-auto;
+
+    max-width: map-get(bootstrap.$container-max-widths, 'xxl' );
+
+    .olimpica__section-title-footer{
+        @extend .pt-4;
+    }
+
+    .catalogo__collections{
+        @extend .row;        
+        @extend .gy-2;
+        @extend .flex-column;
+        @extend .flex-md-row;
+        .olimpica__img--footer{            
+            @extend .col-md-4;
+
+            height: 13rem;
+
+        }   
+    }
+    
+}
+
+/*=====  End of CATALOGO FOOTER  ======*/
+
+

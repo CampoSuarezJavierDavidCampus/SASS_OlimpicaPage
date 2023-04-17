@@ -1,0 +1,114 @@
+@use '../../custom' as bootstrap;
+/*=============================================
+=            CATALOGO SUPERMERCADO            =
+=============================================*/
+
+
+.catalogo__supermarket{    
+    @extend .container-fluid;
+    background-image: url('../../../assets/media/img/catalogos/supermercado/fondo.jpg');  
+
+    .container{
+        @extend .row;
+        @extend .justify-content-center;
+        @extend .mx-auto;        
+        @extend .px-lg-4;
+        @extend .px-0;
+        @extend .py-4;      
+
+    }
+    
+    
+    
+    .catalogo__supermarket-tittle{
+        @extend .bg-warning;
+    }
+
+    .carousel{        
+        @extend .col-md-8;        
+        
+
+        &-inner{
+            @extend .h-100;
+            @extend .border;
+            @extend .border-5;
+            @extend .border-white;
+            @extend .rounded-5;
+        }
+
+        &-item{
+            @extend .h-100;
+        }        
+    }
+
+    .catalogo__imagen{         
+        min-height: 2.125rem;            
+
+        &--lg{
+            @extend .px-0;        
+        }
+
+        &--md{                
+            @extend .col-md-4;        
+            @extend .py-2;
+            @extend .py-md-0;
+            
+        }
+    }
+
+    .catalogo__collections{    
+        @extend .container-xl;
+        @extend .row;
+        @extend .justify-content-evenly;
+        @extend .gy-4;
+        @extend .px-0;        
+        @extend .py-4;
+        
+        .olimpica__img--collections{
+            
+            @extend .col-5;    
+            @extend .col-md-3;
+            @extend .px-0;                
+            @extend .border;
+            @extend .border-5;
+            @extend .border-white;
+            @extend .rounded-2;
+            
+            height: auto;
+            max-width: 18.0625rem;
+            max-height: 21.5625rem;
+           
+            cursor: pointer;            
+
+            &-hidden{
+                @extend .d-none;
+                @extend .d-md-block;
+            }
+        }
+    }
+}
+
+
+@include bootstrap.media-breakpoint-up('lg'){
+    .carousel{        
+        height: 24rem;
+    }
+    
+    .catalogo__imagen--md{
+        height: 24rem;
+        
+    }
+}
+@include bootstrap.media-breakpoint-down('lg'){
+    .carousel{        
+        height: 12rem;
+    }
+
+    .catalogo__imagen--md{
+        height: 12rem;        
+    }
+}
+/*=====  End of CATALOGO SUPERMERCADO  ======*/
+
+
+

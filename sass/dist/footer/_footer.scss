@@ -1,0 +1,189 @@
+@use '../../custom' as bootstrap;
+
+
+/*=============================================
+=            FOOTER            =
+=============================================*/
+.olimpica__footer{
+    @extend .position-relative;        
+
+    .footer-enlaces{
+        @extend .container-lg;
+        @extend .d-flex;     
+        @extend .flex-wrap;                        
+        @extend .justify-content-center;
+        @extend .mt-5;
+        @extend .pb-4;
+        @extend .position-relative; 
+
+        .olimpica__subscripcion{
+            @extend .col-lg-10;
+            @extend .position-relative;            
+            @extend .row;
+            @extend .justify-content-center;
+            @extend .align-items-center;    
+            @extend .p-3;
+            
+            top: -2rem;
+
+            .form-label{
+                @extend .col;
+            }
+            .input-group{
+                @extend .col-lg-4;
+                
+                .form-control{
+                    @extend .py-2;                    
+                }
+                .input-group-text{
+                    @extend .ps-0;
+                    @extend .position-relative;
+                    z-index: 100;
+                    .icon__olimpica{
+                        @extend .px-3;
+                        @extend .py-1;
+                        @extend .fs-4;
+
+                        &::after{
+                            @extend .position-absolute;                            
+                            content: '';
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            margin: auto;
+                            z-index: -10;
+                            height: 100%;                            
+                            width: 2.5rem ;
+                        }
+                    }
+                }                
+            } 
+        }      
+
+        .olimpica__logo, .olimpica__enlaces{
+            height: 23rem;
+        }
+        
+        .olimpica__logo{   
+            @extend .col-sm-6;         
+            @extend .col-lg-4;
+            @extend .d-flex;
+            @extend .flex-wrap;
+            @extend .justify-content-center;            
+
+            .olimpica__img{
+                height: 6rem;
+                width: 15rem;
+                cursor: pointer;
+            }
+
+            &-help{
+                @extend .pt-2;
+                @extend .mx-3;
+                @extend .mx-md-0;
+            }
+
+            &-subtitle{
+                @extend .col-12;     
+                @extend .mb-2;     
+                @extend .px-0;      
+            }
+
+            &-redes-sociales{
+                @extend .col-12;
+                @extend .d-flex;
+                @extend .flex-wrap;
+                @extend .justify-content-start;                      
+                @extend .pb-2;             
+                .icon__olimpica{
+                    @extend .col-1;
+                    @extend .me-2;
+                }                
+            }
+
+            &-apps{
+                @extend .col-12;              
+                @extend .row;
+                @extend .px-0; 
+                @extend .justify-content-evenly;                               
+            }
+
+            &-store{
+                @extend .col-5;
+                
+            }
+            
+        }
+
+
+        .olimpica__enlaces{
+            @extend .col-12;
+            @extend .col-md-8;         
+            @extend .col-lg-8;
+            @extend .p-2;            
+            @extend .overflow-y-auto;
+        }        
+
+        .accordion{
+            &-button[aria-expanded='true']::after{
+                transform: rotate(-90deg);
+            }
+
+            &-button:focus{
+                box-shadow: none;
+            }
+
+            .list-group .list-group{
+                @extend .pt-0;
+            }
+        }
+
+        .olimpica__copyright{            
+            @extend .col-12; 
+            @extend .row;
+            
+            @extend .justify-content-evenly;
+            @extend .mt-4;  
+            .copyright__derechos{
+                @extend .col-lg-6;
+                @extend .py-3;
+                .copyright__correo{                                        
+                    @extend .d-block;                                        
+                }
+            }          
+            
+            .copyright__patrocinios{
+                @extend .col-lg-4;
+                @extend .d-flex;
+                @extend .justify-content-center;
+                
+                @extend .py-4; 
+                .patrocinios__compra{
+                    @extend .d-flex;
+                    @extend .flex-column;
+                    @extend .align-items-start;
+                    @extend .px-2;   
+
+
+                    .patrocinio__logo{                    
+                        @extend .d-block;
+                        @extend .align-self-center;
+                        @extend .pt-2;
+                        width: 4rem;
+                        height: 4rem;
+                        &--gineco{
+                            width: 6rem;
+                        }
+                    }
+                }               
+                
+            }
+        }
+
+       
+    }
+}
+
+
+/*=====  End of FOOTER  ======*/
+

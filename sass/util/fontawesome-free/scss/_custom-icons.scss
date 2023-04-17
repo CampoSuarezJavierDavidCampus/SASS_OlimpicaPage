@@ -1,0 +1,96 @@
+.icon__olimpica{    
+    color: #fff;
+
+    &--user{       
+        @include fa-icon-solid(map-get($fa-icons,"user-astronaut"));        
+    }
+
+    &--cart{        
+        @include fa-icon-solid(map-get($fa-icons,"cart-shopping"));        
+    }
+
+    &--search{
+        @include fa-icon-solid(map-get($fa-icons,"magnifying-glass"));                
+    }
+
+    &--telephone-sales{
+        @include fa-icon-solid(map-get($fa-icons,"phone-volume"));                
+    }
+
+    &--whatsapp{
+        @include fa-icon-brands(map-get($fa-brand-icons,"whatsapp"));        
+    }
+
+    &--register{
+        @include fa-icon-solid(map-get($fa-icons,"cash-register"));
+    }
+
+    &--accordion-return{
+        @include fa-icon-solid(map-get($fa-icons,"arrow-left-long"));                
+    }
+
+    &--form-submit-arrow{
+        @include fa-icon-solid(map-get($fa-icons,"arrow-right-long"));                
+    }
+
+    &--message{        
+        @include fa-icon-regular(map-get($fa-icons,"envelope"));               
+    }
+
+    &--facebook{
+        @include fa-icon-brands(map-get($fa-brand-icons,"facebook"));        
+    }
+
+    &--instagram{
+        @include fa-icon-brands(map-get($fa-brand-icons,"instagram"));        
+    }
+
+    &--twitter{
+        @include fa-icon-brands(map-get($fa-brand-icons,"twitter"));        
+    }
+
+    &--youtube{
+        @include fa-icon-brands(map-get($fa-brand-icons,"youtube"));        
+    }
+    &--app-store{
+        @include fa-icon-brands(map-get($fa-brand-icons,"app-store"));        
+    }
+    &--play-store{
+        @include fa-icon-brands(map-get($fa-brand-icons,"google-play"));        
+    }
+
+    &--supermercado{        
+        @include fa-icon-solid(map-get($fa-icons,"wheat-awn"));        
+    }
+
+    &--drogeria{
+        @include fa-icon-solid(map-get($fa-icons,"pills"));
+    }
+
+    &--electrodomesticos{
+        @include fa-icon-solid(map-get($fa-icons,"microchip"));        
+    }
+
+    &--catalogo{
+        @include fa-icon-solid(map-get($fa-icons,"book-open"));                
+    }
+
+    &--location{
+        @include fa-icon-solid(map-get($fa-icons,"location-dot"));                     
+    }
+
+    &--shop{
+        @include fa-icon-solid(map-get($fa-icons,"shop"));                             
+    }
+
+    &--add{
+        @include fa-icon-solid(map-get($fa-icons,"cart-plus"));        
+    }
+
+    &--zoom{
+        @include fa-icon-solid(map-get($fa-icons,"magnifying-glass-plus"));
+    }
+}
+
+
+ 

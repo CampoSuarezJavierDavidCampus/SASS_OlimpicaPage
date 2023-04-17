@@ -1,0 +1,236 @@
+@use '../../custom' as bootstrap;
+
+
+/*=============================================
+=            CATALOGO HEADER                  =
+=============================================*/
+
+.catalogo__header{    
+    @extend .row; 
+    @extend .align-items-start;   
+    @extend .gy-3;
+    @extend .mb-4;
+    @extend .pb-4;
+    @extend .mx-auto;
+    max-width: map-get(bootstrap.$container-max-widths, 'xl' );
+    .olimpica__badge-collection{        
+        @extend .pt-2;        
+        @extend .d-flex;
+        @extend .flex-wrap;
+        @extend .justify-content-evenly;
+        @extend .align-items-start;
+
+        .olimpica__badge-enlace{                                                      
+            @extend .mb-2;  
+            @extend .d-inline-block;
+
+            .olimpica__badge-text{
+                @extend .position-relative;                
+                @extend .m-auto;
+                @extend .mx-2;
+
+                top: 0;
+                bottom: 0;
+
+            }    
+
+        }
+
+        &--send{            
+            @extend .col-lg-3;
+
+            max-width: 18rem;
+
+            .olimpica__badge-enlace{                
+                @extend .px-1;          
+                @extend .d-flex;
+                @extend .flex-wrap;
+
+                &--abejoral{                    
+                    @extend .col-5;
+
+                    .icon__olimpica{
+                        @extend .col-2;                        
+                    }
+
+                    .olimpica__badge-text{
+                        @extend .col-8;
+                        &--small{
+                            @extend .col-12;
+                        }
+                    }                        
+                } 
+                &--metodo-envio{
+                    @extend .col-6;
+                    .icon__olimpica{
+                        @extend .col-2;                        
+                    }
+
+                    .olimpica__badge-text--small{                                              
+                        @extend .col-8;                        
+                    }  
+                }
+                
+            }
+        }
+
+        &--sections{
+            @extend .col-lg-9;
+              
+            .olimpica__badge-enlace{
+                @extend .px-md-2; 
+                
+            }
+        }
+
+        
+    }
+
+    .olimpica__picture-xl{        
+        .olimpica__img{
+            min-height: 5rem;
+            
+        }
+    }
+
+    #olimpica__carousel-principal-ofertas{                     
+        @extend .my-0;
+
+        height: auto;
+
+        .carousel-inner{
+            @extend .px-2;
+            @extend .pb-2;                        
+        }
+
+        .carousel-item{
+            @extend .overflow-x-auto;            
+            @extend .py-2;
+        }
+    }
+
+    .carousel{
+        @extend .mb-4;
+    }
+
+    .card-container{
+        @extend .row;
+        @extend .flex-nowrap;        
+    }
+
+    .card{            
+        @extend .mx-2;
+        width: 14rem;        
+
+        .olimpica__picture{
+            @extend .position-relative;
+            height: 14rem;
+            .card-img-mesage{
+                height: 6.25rem;
+            }
+            .olimpica__img--descuento{
+                @extend .position-absolute;
+                right: 0;
+                width: 4rem;
+                height: 4rem;
+            }       
+            
+            &-actions{                                
+                @extend .flex-column;
+                @extend .p-2;                
+                @extend .position-absolute;
+                @extend .z-1;
+
+                display: none;
+                bottom: 0;
+                right: 0;
+                .icon__olimpica{
+                    @extend .m-1;
+                    @extend .p-2;
+                    @extend .z-3;
+
+                    position: relative;
+                    cursor: pointer;
+
+                    &::after{
+                        content: '';
+                        width: 100%;
+                        height: 100%;                        
+                        position: absolute;
+                        z-index: -1;
+                        opacity: .8;                        
+                        left: 0;
+                        top: 0;
+                    }
+                    
+                    &:hover::after{
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &:hover .olimpica__picture-actions{
+                @extend .d-flex;                
+            }
+
+            &:hover::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                
+                opacity: .4;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        
+        &-img-mesage{
+            @extend .px-2;
+        }
+
+        &-body{
+            @extend .row;
+
+            height: 5rem;
+            
+            .olimpica__img--card{
+                @extend .col-6;
+                @extend .p-0;
+                width: 2rem;
+                height: 2rem;
+            }
+
+            &__precio{
+                @extend .col-7;
+                @extend .p-0;
+            }
+
+            &__small-precio-precio{
+                @extend .col-12;
+            }
+
+            &__small-precio{
+                @extend .col-5;
+                @extend .p-0;
+            }
+
+
+
+
+        }
+    }   
+    
+
+    .olimpica__picture-md{
+        @extend .shadow-lg;
+        @extend .px-0;
+    }
+
+
+}
+
+
+/*=====  End of CATALOGO HEADER  ======*/
+
